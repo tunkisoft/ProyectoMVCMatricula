@@ -32,7 +32,7 @@ function llenarCombo(data, control, primerElemento) {
 
  
 function abrirModal(id) {
-    //borrar o limpiar x en los formularios.
+    //borrar o limpiar x en los formularios
     listar();
     var controlesObligatorio = document.getElementsByClassName("obligatorio");
     var ncontroles = controlesObligatorio.length;
