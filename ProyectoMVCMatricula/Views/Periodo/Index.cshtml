@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Periodo</h2>
+<link href="~/Content/datatables.css" rel="stylesheet" />
+<link href="~/Content/jquery-ui.min.css" rel="stylesheet" />
+<link href="~/Content/cssPropio.css" rel="stylesheet" />
+<div class="form-group">
+    <div class="col-md-3">
+        <label>Ingrese Nombre Periodo:</label> 
+    </div> 
+    <div class="col-md-3">
+        <input type="text" id="txtNombre" class="form-control" />
+    </div>  
+    <div class="col-md-3">
+        <button type="button" class="btn btn-primary" onclick="abrirModal(0)" data-toggle="modal" data-target="#myModal">
+            Agregar
+        </button>
+    </div> 
+</div>
+ <br />
+<br />
+<br />
+<br />
+<div class="row">
+    <div id="tabla">
+
+
+    </div>
+</div>
+
+<!-- Button to Open the Modal -->
+<!-- Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Agregar Periodo</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <table style="width:80%;margin:auto">
+                    <tr>
+                        <td width="40%">ID Periodo :</td>
+                        <td width="60%"><input class="borrar" type="text" id="txtIDPeriodo" readonly /></td>
+                    </tr>
+                    <tr>
+                        <td width="40%">Ingrese Nombre Periodo :</td>
+                        <td width="60%"><input class="borrar obligatorio" type="text" id="txtNombrePeriodo" /></td>
+                    </tr>
+                    <tr>
+                        <td width="40%">Ingrese Fecha Inicio :</td>
+                        <td width="60%"><input class="borrar obligatorio" type="text" id="datepickerInicio" /></td>
+                    </tr>
+                    <tr>
+                        <td width="40%">Ingrese Fecha Fin :</td>
+                        <td width="60%"><input class="borrar obligatorio" type="text" id="datepickerFin" /></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button onclick="Agregar()" id="btnAceptar" type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+                <button id="btnCancelar" type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+
+            </div> 
+
+        </div>
+    </div>
+</div>
+ 
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/jquery-ui.min.js"></script>
+<script src="~/Scripts/Periodo.js"></script>
+<script src="~/Scripts/datatables.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+

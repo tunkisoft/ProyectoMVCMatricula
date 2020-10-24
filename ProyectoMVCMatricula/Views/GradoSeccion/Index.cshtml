@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<link href="~/Content/jquery-ui.min.css" rel="stylesheet" /> 
+<link href="~/Content/cssPropio.css" rel="stylesheet" />
+<link href="~/Content/datatables.css" rel="stylesheet" />
+<h2>Grado Sección</h2>
+<input type="button" value="Agregar" class="btn btn-primary" onclick="abrirModal(0)" data-toggle="modal" data-target="#myModal" />
+<br />
+<div class="row">
+    <div id="tabla">
+
+    </div>
+</div>
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Crear Alumno</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <table style="width:80%;margin:auto">
+                    <tr>
+                        <td width="40%">ID GradoSección :</td>
+                        <td width="60%"><input class="borrar" type="text" id="txtIDGradoSeccion" readonly /></td>
+                    </tr>
+                    <tr>
+                        <td width="40%">Ingrese Grado :</td>
+                        <td width="60%"><select class="borrar obligatorio" id="cboGrado"></select></td>
+                    </tr>
+                    <tr>
+                        <td width="40%">Ingrese Sección :</td>
+                        <td width="60%"><select class="borrar obligatorio" id="cboSeccion"></select></td>
+                    </tr>
+                  
+                </table>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button onclick="Agregar()" id="btnAceptar" type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+                <button id="btnCancelar" type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script> 
+<script src="~/scripts/GradoSeccion.js"></script>
+<script src="~/Scripts/datatables.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+ 
+

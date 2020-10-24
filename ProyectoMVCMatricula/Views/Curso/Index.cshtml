@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Cursos Controller</h2>
+<link href="~/Content/datatables.css" rel="stylesheet" />
+<link href="~/Content/cssPropio.css" rel="stylesheet" />
+<label>Ingrese Nombre: </label>
+<input type="text" id="txtNombre" />
+<input type="button" id="btnBuscar" value="Buscar" class="btn btn-success" />
+<input type="button" id="btnLimpiar" value="Limpiar" class="btn btn-primary" /><br />
+<button type="button" class="btn btn-primary" onclick="abrirModal(0)" data-toggle="modal" data-target="#myModal">
+    Agregar
+</button><br />
+<br />
+<br />
+<div class="row">
+    <div id="tabla">
+
+    </div>
+</div>
+ 
+<!-- Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Agregar Curso</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <table style="width:80%;margin:auto">
+                    <tr>
+                        <td width="40%">ID Curso :</td>
+                        <td width="60%"><input class="borrar" type="text" id="txtIDCurso" readonly /></td>
+                    </tr>
+                    <tr>
+                        <td width="40%">Ingrese Nombre Curso :</td>
+                        <td width="60%"><input class="borrar obligatorio" type="text" id="txtNombreCurso" /></td>
+                    </tr>
+                    <tr>
+                        <td width="40%">Ingrese Descripcion Curso :</td>
+                        <td width="60%"><input class="borrar obligatorio" type="text" id="txtDescripcion" /></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button onclick="Agregar()" type="button" class="btn btn-success">Aceptar</button>
+                <button id="btnCancelar" type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/Curso.js"></script>
+<script src="~/Scripts/datatables.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+

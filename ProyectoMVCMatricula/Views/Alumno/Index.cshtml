@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<link href="~/Content/datatables.css" rel="stylesheet" />
+<link href="~/Content/jquery-ui.min.css" rel="stylesheet" />
+<link href="~/Content/cssPropio.css" rel="stylesheet" />
+<h2>Alumno</h2> 
+<div class="col-md-2">
+    <label>Seleccione Sexo</label>
+</div>
+<div class="col-md-3"> 
+    <select id="cboSexo" class="form-control"></select>
+</div>
+
+<input type="button" id="btnBuscar" value="Buscar" class="btn btn-success" />
+<input type="button" id="btnLimpiar" value="Limpiar" class="btn btn-primary" /><br /><br />
+<input type="button" value="Agregar" class="btn btn-primary" onclick="abrirModal(0)" data-toggle="modal" data-target="#myModal" /> 
+<br />
+<br />
+<br />
+<div class="row">
+    <div id="tabla">
+
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Crear Alumno</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <table style="width:80%;margin:auto">
+                    <tr>
+                        <td width="40%">ID Alumno :</td>
+                        <td width="60%"><input class="borrar" type="text" id="txtIDAlumno" readonly /></td>
+                    </tr>
+                    <tr>
+                        <td width="40%">Ingrese Nombre :</td>
+                        <td width="60%"><input class="borrar obligatorio" type="text" id="txtNombreAlumno" /></td>
+                    </tr>
+                    <tr>
+                        <td width="40%">Ingrese Apellido Paterno :</td>
+                        <td width="60%"><input class="borrar obligatorio" type="text" id="txtApellidoPaterno" /></td>
+                    </tr>
+                    <tr>
+                        <td width="40%">Ingrese Apellido Materno :</td>
+                        <td width="60%"><input class="borrar obligatorio" type="text" id="txtApellidoMaterno" /></td>
+                    </tr>
+                    <tr>
+                        <td width="40%">Ingrese Fecha Nacimiento :</td>
+                        <td width="60%"><input class="borrar obligatorio" type="text" id="dtpFechaNacimiento" /></td>
+                    </tr>
+                    <tr>
+                        <td width="40%">Ingrese Sexo :</td>
+                        <td width="60%"><select class="borrar obligatorio" id="cboSexoAlumno"></select></td>
+                    </tr>
+                    <tr>
+                        <td width="40%">Ingrese Telefono Padre :</td>
+                        <td width="60%"><input class="borrar obligatorio" type="number" id="txtTelPadre" /></td>
+                    </tr>
+                    <tr>
+                        <td width="40%">Ingrese Telefono Madre :</td>
+                        <td width="60%"><input class="borrar obligatorio" type="number" id="txtTelMadre" /></td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button onclick="Agregar()" id="btnAceptar" type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+                <button id="btnCancelar" type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/jquery-ui.min.js"></script>
+<script src="~/Scripts/Alumno.js"></script>
+<script src="~/Scripts/datatables.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
